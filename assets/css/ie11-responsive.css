@@ -1,0 +1,394 @@
+/* ------------------------------------------------
+	ALTERNATIVE RESPONSIVE STYLES FOR TEMPLATE 
+	FOR INTERNET EXPLORER 11 BROWSER THAT DON'T SUPPORT: 
+		- CSS GRID LAYOUT 
+		- CSS CUSTOM PROPERTIES
+		- OTHER NEW CSS TECHNIQUES
+		
+	ATTENTION! 
+	THIS STYLES DO NOT REPLACE FULLY BASIC STYLES, 
+		ONLY SUPPLE AND PARTIALLY REPLACE	
+------------------------------------------------ */
+
+/*
+_________________________________________________
+
+	Stories - HTML5 Personal Blog CSS Grid Layout Template
+	Version: 1.0 (created - 29.06.2019)
+	Created By: Nina Papchenya
+	Support: ninapapchenya@gmail.com
+_________________________________________________
+
+
+--- Table of Contents ---
+	
+	1.0 Breakpoint 1200px 
+		-- Layout elements
+		-- Page About me
+		-- Blog Layout 4 - Grid Layout "Checkers"
+	 
+	2.0 Breakpoint 901px
+		-- Layout elements
+		-- Footer
+		-- Photos
+		-- Sliders
+		-- Post filter section
+		-- Main page
+		-- Blog Layout 3 - Two Columns Layout "Tile"
+		-- Hero post 2
+		-- Hero post list
+	 
+	3.0 Breakpoint 769px 
+		-- Header
+		-- Photos
+		-- Short post list
+		-- Blog Layout 2 - Two Columns Layout
+		-- Blog Layout 3 - Two Columns Layout "Tile"
+		-- Blog Layout 4 - Grid Layout
+		
+	4.0 Breakpoint 425px 
+	
+--- End - Table of Contents ---	
+*/
+
+/**
+ * 1.0 Breakpoint 1200px 
+ */
+@media screen and (-ms-high-contrast: active), 
+	(-ms-high-contrast: none) and (max-width: 1200px) {
+	/* Layout elements */
+	.main .aside-to-right  {
+		margin-right: -40px;
+		margin-left: -40px;
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+	/* End-Layout elements */
+	
+	/* Page About me */
+	.decorative-header {
+		margin: 0 0 3em 0;
+		padding: 0 2em;
+	}
+	/* End-Page About me */
+	
+	/* Blog Layout 4 - Grid Layout "Checkers" */
+	.bl4-grid-layout .post-preview {
+		width: 50%;
+	}
+	
+	.bl4-grid-layout .post-preview:nth-child(4n), 
+	.bl4-grid-layout .post-preview:nth-child(4n+1) {
+		background-color: #f6f6f6;
+	}
+	
+	.bl4-grid-layout .post-preview:nth-child(odd) figure {
+		order: 1;
+	}
+	
+	.bl4-grid-layout .post-preview:nth-child(even) figure {
+		order: -1;
+	}
+	/* End-Blog Layout 4 - Grid Layout "Checkers" */
+}		
+/**
+ * End-1.0 Breakpoint 1200px 
+ */
+
+/**
+ * 2.0 Breakpoint 901px
+ */
+@media screen and (-ms-high-contrast: active), 
+	(-ms-high-contrast: none) and (max-width: 901px) {
+	/* Layout elements */
+	.main .part_half_left,
+	.main .part_half_right	{
+		float: none;
+		width: 100%;	
+	}
+	
+	.container {
+		padding: 0 20px;
+	}
+	/* End-Layout elements */
+	
+	/* Footer */
+	.footer-content {
+		flex-direction: column;
+	}
+	
+	.footer-content > *	{
+		flex: 1 1 100%;
+	}	
+	
+	.footer-content .small-logo {
+		min-height: 2em;
+		height: 2em;
+	}
+	/* End-Footer */
+	
+	/* Photos */
+	.photo-in-text-v2 {
+		margin-right: 0;
+		padding-right: 0;
+	}	
+	
+	.container .photo-in-text-v2 figcaption {
+		width: 100%;
+		padding: 3em 1.6em;
+	}
+	/* End-Photos */
+	
+	/* Sliders */
+	.slider .pager .curr-item {
+		border-bottom: 1px #757575 solid;
+	}
+	
+	.slider-type3 figure figcaption {
+		right: 0;
+		left: 0;
+		width: auto;
+	}
+	/* End-Sliders */
+	
+	/* Post filter section */
+	.post-filter-slideDown {
+		flex-wrap: wrap;
+	}
+	
+	.post-categories-list,
+	.post-tags-list { 
+		flex: 1 1 50%;
+		align-items: flex-start;
+	}
+	
+	.post-filter-action {
+		flex: 1 1 100%;
+		padding-bottom: 2em;
+	}
+	
+	.post-categories-list h4,
+	.post-tags-list h4 { 
+		margin-top: 0;
+	}
+	
+	.post-categories-list ul,
+	.post-tags-list ul {
+		width: 100%;
+		margin: 0;
+		padding: 0 2em 2em 0;
+	}
+	/* End-Post filter section */
+	
+	/* Main page */
+	.main-page-slider + section > .section-header:first-child {
+		margin-top: 4em; 
+	}
+	
+	.s-about-me {
+		display: block;
+		background-image: linear-gradient(to bottom, transparent 0%, transparent 4em, #fff0ec 4em, #fff0ec 100%);
+	}
+	
+	.s-about-me .description {
+		width: auto;
+		margin-left: 0;
+		padding: 4em 2em;
+	}
+	/* End-Main page */
+	
+	/* Blog Layout 3 - Two Columns Layout "Tile" */
+	.bl3-two-columns-layout-tile .post-preview .post-preview-header {
+		flex: 1 1 100%;
+		margin-right: 0;
+	}
+	
+	.bl3-two-columns-layout-tile .post-preview .announce { 
+		flex: 1 1 100%;
+	}
+	/* End-Blog Layout 3 - Two Columns Layout "Tile" */
+	
+	/* Hero post 2 */
+	.hero-post-layout2 figure {
+		flex: 1 1 100%;
+	}
+	
+	.hero-post-layout2 .hero-post-header {
+		order: 0;
+	}
+	
+	.hero-post-layout2 .hero-post-announce {
+		width: 100%;
+		background-color: #fff0ec;
+	}
+	/* End-Hero post 2 */
+	
+	/* Hero post list */
+	.hero-post-list-preview,
+	.hero-post-list-preview:nth-child(even)	{
+		width: 100%;
+		margin: 0;
+	}
+	
+	.hero-post-list-header,
+	.hero-post-list-meta {
+		width: 50%;
+	}
+	
+	.hero-post-list-meta {
+		text-align: right;
+		padding: 0 20px;
+	}
+	
+	.hero-post-list-preview:nth-child(even) {
+		margin-top: 2em;
+	}
+	
+	.hero-post-list-preview:nth-child(even) .hero-post-list-header {
+		order: -1;
+	}
+	
+	.hero-post-list-preview:nth-child(even) .hero-post-list-meta {
+		text-align: left;
+	}
+	/* End-Hero post list */
+	
+	/******************/
+}
+/**
+ * End-2.0 Breakpoint 901px
+ */
+
+/**
+ * 3.0 Breakpoint 769px 
+ */
+@media screen and (-ms-high-contrast: active), 
+	(-ms-high-contrast: none) and (max-width: 769px) {
+
+	/* Header */
+	header {
+		margin-bottom: 2em;
+	}
+	
+	.logo {
+		flex: 1 1 auto;
+	} 
+	
+	.mobile-menu-opener {
+		flex: 0 1 auto;
+	}
+	
+	.mobile-menu-screen {
+		background: #fff;
+	}
+	
+	.mobile-menu-screen:after{
+		background: #f5cd87;
+		background-image: linear-gradient(to right, #c19f63, #f5cd87);
+	}
+	
+	.main-nav {
+		background: #fff;
+	}
+	
+	.search-form form {
+		margin: 2em 0;
+	}
+	
+	.has-submenu {
+		margin: calc(.5em + .5vw) 0;
+	}
+	/* End-Header */
+	
+	/* Photos */
+	.photo-group figure {
+		padding-bottom: 56.25%; 
+	}
+	
+	.photo-group figure:nth-child(2n) {
+		margin-left: 10px;
+	}
+	/* End-Photos */
+	
+	/* Short post list */
+	.short-post-list {
+		flex-wrap: wrap;
+		padding-bottom: 0;
+	}
+	
+	.short-post-preview {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 4em;
+	}
+	/* End-Short post list */
+	
+	/* Blog Layout 2 - Two Columns Layout */
+	.bl2-two-columns-layout .post-preview {
+		flex: 1 1 auto;
+		width: 100%;
+		border-bottom: 3px #c19f63 solid;
+	}
+	/* End-Blog Layout 2 - Two Columns Layout */
+	
+	/* Blog Layout 3 - Two Columns Layout "Tile" */
+	.bl3-two-columns-layout-tile .post-preview { 
+		flex: 1 1 auto;
+		width: 100%;
+		border-bottom: 3px #c19f63 solid; 
+	}
+	
+	.bl3-two-columns-layout-tile .post-preview:nth-child(even) figure {
+		order: 0;
+	}
+	
+	.bl3-two-columns-layout-tile .post-preview figure img {
+		width: 100%;
+	}
+	/* End-Blog Layout 3 - Two Columns Layout "Tile" */
+	
+	/* Blog Layout 4 - Grid Layout */
+	.bl4-grid-layout .post-preview {
+		width: 100%;
+	}
+	
+	.bl4-grid-layout .post-preview:nth-child(n) {
+		background-color: #f6f6f6; 
+	}
+	
+	.bl4-grid-layout .post-preview:nth-child(even) {
+		background-color: transparent;
+	}
+	
+	.bl4-grid-layout .post-preview:nth-child(n) figure {
+		order: 1;
+		margin-top: 20px;
+	}
+	/* Blog Layout 4 - Grid Layout */
+}
+/**
+ * End-3.0 Breakpoint 769px 
+ */ 
+
+/**
+ * 4.0 Breakpoint 425px 
+ */ 
+@media screen and (-ms-high-contrast: active), 
+	(-ms-high-contrast: none) and (max-width: 425px) {
+	
+	.main .aside-view {
+		background-image: linear-gradient(to bottom, #fff 0%, #fff 10%, #f6f6f6 10%, #f6f6f6 100%); 
+	}
+	
+	.comment-list-header {
+		align-items: flex-start;
+	}
+	
+	.post-categories-list, 
+	.post-tags-list {
+		flex: 1 1 100%;
+	}
+} 
+/**
+ * End-4.0 Breakpoint 425px 
+ */
